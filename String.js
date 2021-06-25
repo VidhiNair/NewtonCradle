@@ -15,13 +15,17 @@ class String{
     }
 
     display(){
-         var pointA=this.sling.bodyA.position;
-         var pointB=this.pointB
-         push();
-         stroke(48,22,8);
-         strokeWeight(7);
-
-         line(pointA.x - 20, pointA.y, pointB.x-10, point.y);
-    }
+        
+        if(this.rope.bodyA){
+            var pointA = this.rope.bodyA.position;
+            var pointB = this.pointB;
+            push();
+            
+            stroke(48,22,8);
+           line(pointB.x,pointB.y,pointA.x,pointA.y);
+           
+            
+            pop();
+        }
 
 }
